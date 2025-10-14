@@ -1,0 +1,113 @@
+/* =============================================== */
+/* ==         File Aturan Responsif             == */
+/* =============================================== */
+
+/* -- Untuk Desktop Lebih Lebar (Opsional, tapi bagus) -- */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px; /* Sedikit lebih lebar di layar besar */
+    }
+}
+
+/* -- Tablet & Desktop Kecil -- */
+@media (max-width: 992px) {
+    #about .about-content {
+        flex-direction: column; /* Tumpuk gambar dan teks lebih awal */
+        text-align: center;
+    }
+
+    #about .about-text {
+        padding-left: 0; /* Hapus padding ekstra */
+    }
+
+    .skills-grid {
+        justify-content: center;
+    }
+}
+
+/* -- Tablet & Smartphone (Potrait) -- */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    h1, #hero h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    /* --- Header Responsif --- */
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    /* --- Timeline Experience --- */
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 50px;
+        padding-bottom: 40px;
+    }
+
+    .timeline-dot {
+        left: 12px;
+    }
+}
+
+/* -- Smartphone Kecil -- */
+@media (max-width: 480px) {
+    h1, #hero h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.9em;
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        padding: 10px 22px;
+        font-size: 0.9em;
+    }
+
+    .logo span {
+        font-size: 0.9em;
+    }
+
+    .project-card-content {
+        padding: 20px;
+    }
+    
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
