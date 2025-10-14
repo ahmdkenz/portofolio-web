@@ -502,3 +502,83 @@
                 font-size: 1.5em;
             }
         }
+        /* --- About Section --- */
+#about {
+    background-color: var(--secondary-bg);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Default untuk mobile */
+    align-items: center;
+    gap: 40px; /* Jarak antara gambar dan teks */
+    max-width: 1000px; /* Batasi lebar konten tentang saya */
+    margin: 0 auto;
+    text-align: center; /* Teks di tengah untuk mobile */
+}
+
+.profile-img img {
+    width: 200px; /* Ukuran gambar profil */
+    height: 200px;
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa distorsi */
+    border-radius: 50%; /* Membuat gambar lingkaran */
+    border: 5px solid var(--accent-color); /* Border warna aksen */
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.5); /* Efek bayangan */
+    transition: transform 0.3s ease;
+}
+
+.profile-img img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.about-text {
+    flex: 1; /* Agar teks mengambil sisa ruang */
+    text-align: left; /* Teks normal rata kiri */
+}
+
+.about-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--accent-light);
+}
+
+.about-text p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap; /* Skill tag bisa ke bawah jika tidak cukup ruang */
+    gap: 10px; /* Jarak antar skill tag */
+    margin-top: 20px;
+    justify-content: center; /* Pusatkan skill tag untuk mobile */
+}
+
+.skill-tag {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    white-space: nowrap; /* Pastikan tag tidak pecah baris */
+}
+
+/* Responsif untuk desktop: gambar dan teks berdampingan */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Gambar dan teks berdampingan di desktop */
+        text-align: left;
+    }
+    .skills-grid {
+        justify-content: flex-start; /* Skill tag rata kiri di desktop */
+    }
+    .profile-img {
+        flex-shrink: 0; /* Gambar tidak mengecil */
+    }
+    .about-text {
+        padding-left: 40px; /* Beri jarak dari gambar */
+    }
+}
