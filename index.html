@@ -17,6 +17,7 @@
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -68,6 +69,54 @@
                 </div>
             </div>
         </section>
+
+<section id="experience">
+ <div class="container">
+<h2>Work Experience</h2>
+ <div class="timeline">
+ <div class="timeline-item">
+ <div class="timeline-dot"></div>
+ <div class="timeline-content">
+ <div class="timeline-date">Jun 2022 - Present</div>
+ <h3>DUTA OTO RAYA - <span>(Based On Project)</span></h3>
+<h4>Ciracas, Jakarta Timur, DKI Jakarta</h4>
+<ul>
+    <li>Resolved complex hardware and software issues for clients.</li>
+    <li>Developed tailored IT solutions, including CCTV and custom inventory apps.</li>
+    <li>Designed and configured network access points across multiple locations.</li>
+    <li>Designing and developing an end-to-end web-based inventory application.</li>
+</ul>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<div class="timeline-date">Jan 2021 - Present</div>
+<h3>Mustika Computer - <span>Hardware Engineering Computer</span></h3>
+<h4>Ciracas, Jakarta Timur, DKI Jakarta</h4>
+<ul>
+    <li>Expert in diagnosing technical issues for both hardware and software.</li>
+    <li>Skilled in providing customized IT solutions, including custom-built PCs.</li>
+    <li>Designing and developing a modern, end-to-end article platform with a strong focus on SEO.</li>
+</ul>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<div class="timeline-date">Oct 2021 - Dec 2021</div>
+<h3>Astra Honda Motor - <span>IT Support</span></h3>
+<h4>Cibitung, Jawa Barat</h4>
+<ul>
+    <li>Delivered timely technical support, resolving hardware and software issues.</li>
+    <li>Ensured data security by managing routine database backups.</li>
+    <li>Built and deployed customized computer systems to meet client needs.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
 
         <section id="projects">
             <div class="container">
@@ -178,6 +227,22 @@
                     li.classList.add('active');
                 }
             });
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Jika elemen terlihat di layar
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Memicu animasi saat 10% elemen terlihat
+        });
+
+        // Ambil semua elemen timeline dan amati
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach(item => {
+            observer.observe(item);
+        });
         });
     </script>
 </body>
