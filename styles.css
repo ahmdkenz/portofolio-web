@@ -851,3 +851,42 @@
         max-width: 80px; /* Adjust size for smaller screens */
     }
 }
+/* --- Tombol Audio Player --- */
+#audio-player-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#audio-player-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+#audio-player-button .icon-music {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-light);
+}
+
+/* Animasi berputar saat musik diputar */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#audio-player-button.is-playing {
+    animation: spin 4s linear infinite;
+}
