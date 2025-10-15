@@ -303,6 +303,7 @@
         <div class="container">
             <p>&copy; 2025 Portofolio-Ahmad Nur Hafidz. All Rights Reserved.</p>
             <div class="social-links">
+                <a href="https://wa.me/+6285157877443" target="_blank" title="WhatsApp"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M16.75 13.25a2.5 2.5 0 0 1-2.5 2.5h-1v1l-3-3 3-3v1h1a2.5 2.5 0 0 1 2.5 2.5z"></path><path d="M19.25 4.75A16.15 16.15 0 0 0 4.75 19.25L3 21l1.8-4.95a16.15 16.15 0 0 0 14.45-11.3z"></path></svg></a>
                 <a href="https://www.linkedin.com/in/ahmad-nur-hafidz/" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                 <a href="https://glints.com/id/profile/ahmad-nur-hafidz" target="_blank" title="Glints"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></a>
                 <a href="https://github.com/ahmdkenz" target="_blank" title="GitHub"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.4 5.4 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 3c0-.46-1.5-.72-2.31-.62A4.2 4.2 0 0 0 14 3.73l-1 1a4.2 4.2 0 0 0-1-1l-1-1A4.2 4.2 0 0 0 6.3 3c-.81-.1-2.31.16-2.31.62A5.07 5.07 0 0 0 2 4.77a5.4 5.4 0 0 0 0 4.87c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
@@ -408,13 +409,30 @@
 
         const skillItems = document.querySelectorAll('.skill-item');
         skillItems.forEach(item => observer.observe(item));
+        
+        // ===== LOGIKA AUDIO AUTOPLAY =====
+        // Mengaktifkan audio secara otomatis dengan penanganan masalah autoplay policy browser
+        window.addEventListener('load', function() {
+            const backgroundMusic = document.getElementById('background-music');
+            if (backgroundMusic) {
+                // Mencoba memulai pemutaran audio
+                const playPromise = backgroundMusic.play();
+                
+                // Menangani kebijakan autoplay browser
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Autoplay tidak diizinkan: ", error);
+                        // Tambahkan interaksi manual jika diperlukan
+                        document.addEventListener('click', function() {
+                            backgroundMusic.play();
+                        }, { once: true });
+                    });
+                }
+            }
+        });
     </script>
-    <audio id="background-music" src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_181dcd6a5b.mp3" loop></audio>
+    <audio id="background-music" src="audio/kudasaibeats - the girl i haven't met.mp3" loop autoplay></audio>
 
-    <div id="audio-player-button" role="button" aria-label="Play or Pause Music">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-music">
-            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4V7h4V3h-6z"/>
-        </svg>
-    </div>
+    <!-- Tombol audio player dihilangkan karena audio diputar secara otomatis -->
 </body>
 </html>
