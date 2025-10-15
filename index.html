@@ -326,6 +326,8 @@ ai                      <div class="project-image-container">
         const navLinks = document.querySelectorAll('nav a');
         const body = document.body;
 
+        
+
         // Fungsi untuk membuka/menutup menu
         function toggleMenu() {
             hamburger.classList.toggle('is-active');
@@ -435,8 +437,54 @@ ai                      <div class="project-image-container">
                 }
             }
         });
-        
-    </script>
+        (function(){
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Ambil nilai input
+      const name = (document.getElementById('name') || { value: '' }).value.trim();
+      const email = (document.getElementById('email') || { value: '' }).value.trim();
+      const message = (document.getElementById('message') || { value: '' }).value.trim();
+
+      const to = 'ahmadnurhafidz462@gmail.com';
+      const subject = encodeURIComponent(`Portofolio Contact — ${name || 'Visitor'}`);
+      // Buat body dengan baris baru (%0D%0A)
+      const bodyPlain = [
+        `Name: ${name || '-'}`,
+        `Email: ${email || '-'}`,
+        '',
+        'Message:',
+        message || '-'
+      ].join('\r\n');
+      const body = encodeURIComponent(bodyPlain);
+
+      // Gunakan mailto: (paling kompatibel dengan mobile apps)
+      const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+
+      // Coba buka mailto (akan trigger mail app di mobile, atau aplikasi email di desktop jika tersedia)
+      window.location.href = mailto;
+
+      // Fallback: buka Gmail compose di tab baru untuk pengguna desktop (jika pengguna tidak mobile)
+      try {
+        const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+        if (!isMobile) {
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${subject}&body=${body}`;
+          // Buka di tab baru agar tidak mengganggu jika mailto berhasil juga
+          window.open(gmailUrl, '_blank');
+        }
+      } catch (err) {
+        // jika error, biarkan saja (mailto sudah dijalankan)
+        console.warn('Gagal membuka Gmail web sebagai fallback:', err);
+      }
+
+      // Opsional: jika Anda ingin mengosongkan form setelah klik, aktifkan baris berikut:
+      // form.reset();
+        });
+    })();
+        </script>
     <audio id="background-music" src="audio/kudasaibeats - the girl i haven't met.mp3" loop autoplay></audio>
 
     <!-- Tombol audio player dihilangkan karena audio diputar secara otomatis -->
