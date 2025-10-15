@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio-Ahmad Nur Hafidz</title>
 
-    <link rel="icon" type="image/png" href="images/Logo ANH.svg">
+    <link rel="icon" type="image/svg+xml" href="images/Logo ANH.svg">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsives.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#hero" class="logo-link"></a>
-                <img src="images/Logo ANH.svg" alt="Hafidz Logo" class="header-logo">
-                <span>Hafidz | Software Developer</span>
+                <a href="#hero" class="logo-link">
+                    <img src="images/Logo ANH.svg" alt="Hafidz Logo" class="header-logo">
+                    <span>Hafidz | Software Developer</span>
+                </a>
             </div>
+
+            <button class="hamburger-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <nav>
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
@@ -44,8 +54,8 @@
                 <h2>About Me</h2>
                 <div class="about-content">
                    <div class="profile-img">
-    <img src="images/images.png" alt="Foto Profil Anda">
-</div>
+                        <img src="images/images.png" alt="Foto Profil Anda">
+                    </div>
                     <div class="about-text">
                         <h3>Building Amazing Web Experiences</h3>
                         <p>A Frontend Developer with a passion for creating effective and engaging user experiences. Equipped with a strong foundation in HTML, CSS, and
@@ -55,164 +65,156 @@
                             operations. This understanding enables them to collaborate more effectively with backend teams and see the bigger picture of an application. As a fast
                             learner and a natural problem-solver, they are highly enthusiastic about continuously growing and contributing to the creation of high-quality digital
                             products.</p>
-                                                 
+                                                    
                         <p style="margin-top: 20px;"><a href="documents\CV Ahmad Nur Hafidz - Frontend Developer.pdf" target="_blank" class="btn">Download CV</a></p>
                     </div>
                 </div>
             </div>
         </section>
 
-    <section id="skills">
-    <div class="container">
-     <h2>Skills</h2>
-     <div class="skills-container">
+        <section id="skills">
+            <div class="container">
+              <h2>Skills</h2>
+              <div class="skills-container">
+                   <div class="skill-item">
+                       <div class="skill-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" fill="currentColor">
+                               <title>React Logo</title>
+                               <circle cx="0" cy="0" r="2.05" fill="#61DAFB"/>
+                               <g stroke="#61DAFB" stroke-width="1" fill="none">
+                                 <ellipse rx="11" ry="4.2"/>
+                                 <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                                 <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                               </g>
+                           </svg>
+                       </div>
+                       <p>React.js</p>
+                   </div>
+                   <div class="skill-item">
+                      <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630" role="img" aria-label="JavaScript logo">
+                          <rect width="630" height="630" fill="#F7DF1E"/>
+                          <text x="50%" y="62%" text-anchor="middle" font-family="Trebuchet MS, Arial, Helvetica, sans-serif"
+                                font-weight="700" font-size="320" fill="#000">JS</text>
+                        </svg>
+                      </div>
+                      <p>JavaScript</p>
+                   </div>
+                   <div class="skill-item">
+                       <div class="skill-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 36" fill="currentColor">
+                               <path fill="#42b883" d="M25.1,0,20.8,7.2,16.5,0H0L20.8,36,41.6,0Z"/>
+                               <path fill="#35495e" d="M25.1,0,20.8,7.2,16.5,0H8.3L20.8,21.6,33.3,0Z"/>
+                           </svg>
+                       </div>
+                       <p>Vue.js</p>
+                   </div>
+                   <div class="skill-item">
+                        <div class="skill-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#06B6D4" d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                            </svg>
+                        </div>
+                        <p>Tailwind CSS</p>
+                   </div>
+                   <div class="skill-item">
+                      <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Next.js logo">
+                          <rect width="128" height="128" rx="8" fill="#000"/>
+                          <text x="50%" y="55%" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+                                font-weight="800" font-size="56" fill="#fff" style="letter-spacing:-2px;">next</text>
+                          <text x="50%" y="83%" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+                                font-weight="600" font-size="18" fill="#fff">.js</text>
+                        </svg>
+                      </div>
+                      <p>Next.js</p>
+                   </div>
+                   <div class="skill-item">
+                      <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Laravel logo">
+                          <g transform="translate(0,0) scale(1)">
+                            <path fill="#FF2D20" d="M12 2L3 7.5v9L12 22l9-5.5v-9L12 2zM12 4.1l7 4.28v6.04L12 19.9 5 14.42V8.38L12 4.1z"/>
+                            <path fill="#C20F10" d="M12 4.1v15.8l7-4.28V8.38L12 4.1z" opacity="0.08"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <p>Laravel</p>
+                   </div>
+                   <div class="skill-item">
+                      <div class="skill-icon">
+                        <img src="images/laragon.svg" alt="Laragon logo">
+                      </div>
+                      <p>Laragon</p>
+                   </div>
+                   <div class="skill-item">
+                      <div class="skill-icon">
+                        <img src="images/Firebase.svg" alt="Firebase logo">
+                      </div>
+                      <p>Firebase</p>
+                   </div>
+                   <div class="skill-item">
+                      <div class="skill-icon">
+                        <img src="images/MySQL.svg" alt="MySQL logo">
+                      </div>
+                      <p>MySQL</p>
+                   </div>
+                   <div class="skill-item">
+                      <div class="skill-icon">
+                        <img src="images/xampp.svg" alt="XAMPP logo">
+                      </div>
+                      <p>XAMPP</p>
+                   </div>
+              </div>
+            </div>
+        </section>
 
-         <div class="skill-item">
-          <div class="skill-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" fill="currentColor">
-               <title>React Logo</title>
-               <circle cx="0" cy="0" r="2.05" fill="#61DAFB"/>
-               <g stroke="#61DAFB" stroke-width="1" fill="none">
-                <ellipse rx="11" ry="4.2"/>
-                <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
-                <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
-               </g>
-              </svg>
-          </div>
-          <p>React.js</p>
-         </div>
-
-<div class="skill-item">
-  <div class="skill-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630" role="img" aria-label="JavaScript logo">
-      <rect width="630" height="630" fill="#F7DF1E"/>
-      <text x="50%" y="62%" text-anchor="middle" font-family="Trebuchet MS, Arial, Helvetica, sans-serif"
-            font-weight="700" font-size="320" fill="#000">JS</text>
-    </svg>
-  </div>
-  <p>JavaScript</p>
-</div>
-
-         <div class="skill-item">
-          <div class="skill-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 36" fill="currentColor">
-               <path fill="#42b883" d="M25.1,0,20.8,7.2,16.5,0H0L20.8,36,41.6,0Z"/>
-               <path fill="#35495e" d="M25.1,0,20.8,7.2,16.5,0H8.3L20.8,21.6,33.3,0Z"/>
-              </svg>
-          </div>
-          <p>Vue.js</p>
-         </div>
-        <div class="skill-item">
-    <div class="skill-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="#06B6D4" d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
-        </svg>
-    </div>
-    <p>Tailwind CSS</p>
-</div>
- <div class="skill-item">
-  <div class="skill-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Next.js logo">
-      <rect width="128" height="128" rx="8" fill="#000"/>
-      <text x="50%" y="55%" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-            font-weight="800" font-size="56" fill="#fff" style="letter-spacing:-2px;">next</text>
-      <text x="50%" y="83%" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-            font-weight="600" font-size="18" fill="#fff">.js</text>
-    </svg>
-  </div>
-  <p>Next.js</p>
-</div>
-
-<div class="skill-item">
-  <div class="skill-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Laravel logo">
-      <!-- Laravel red crystal shape (simplified but proportional) -->
-      <g transform="translate(0,0) scale(1)">
-        <path fill="#FF2D20" d="M12 2L3 7.5v9L12 22l9-5.5v-9L12 2zM12 4.1l7 4.28v6.04L12 19.9 5 14.42V8.38L12 4.1z"/>
-        <path fill="#C20F10" d="M12 4.1v15.8l7-4.28V8.38L12 4.1z" opacity="0.08"/>
-      </g>
-    </svg>
-  </div>
-  <p>Laravel</p>
-</div>
-
-<div class="skill-item">
-  <div class="skill-icon">
-    <img src="images/laragon.svg" alt="Firebase logo">
-  </div>
-  <p>Laragon</p>
-</div>
-
-<div class="skill-item">
-  <div class="skill-icon">
-    <img src="images/Firebase.svg" alt="Firebase logo">
-  </div>
-  <p>Firebase</p>
-</div>
-<div class="skill-item">
-  <div class="skill-icon">
-    <img src="images/MySQL.svg" alt="MySQL logo">
-  </div>
-  <p>MySQL</p>
-</div>
-<div class="skill-item">
-  <div class="skill-icon">
-    <img src="images/xampp.svg" alt="XAMPP logo">
-  </div>
-  <p>XAMPP</p>
-</div>
-
-     </div>
-    </div>
-</section>
-
-<section id="experience">
- <div class="container">
-<h2>Work Experience</h2>
- <div class="timeline">
- <div class="timeline-item">
- <div class="timeline-dot"></div>
- <div class="timeline-content">
- <div class="timeline-date">Jun 2022 - Present</div>
- <h3>DUTA OTO RAYA - <span>(Based On Project)</span></h3>
-<h4>Ciracas, Jakarta Timur, DKI Jakarta</h4>
-<ul>
-    <li>Resolved complex hardware and software issues for clients.</li>
-    <li>Developed tailored IT solutions, including CCTV and custom inventory apps.</li>
-    <li>Designed and configured network access points across multiple locations.</li>
-    <li>Designing and developing an end-to-end web-based inventory application.</li>
-</ul>
-</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<div class="timeline-date">Jan 2021 - Present</div>
-<h3>Mustika Computer - <span>Hardware Engineering Computer</span></h3>
-<h4>Ciracas, Jakarta Timur, DKI Jakarta</h4>
-<ul>
-    <li>Expert in diagnosing technical issues for both hardware and software.</li>
-    <li>Skilled in providing customized IT solutions, including custom-built PCs.</li>
-    <li>Designing and developing a modern, end-to-end article platform with a strong focus on SEO.</li>
-</ul>
-</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<div class="timeline-date">Oct 2021 - Dec 2021</div>
-<h3>Astra Honda Motor - <span>IT Support</span></h3>
-<h4>Cibitung, Jawa Barat</h4>
-<ul>
-    <li>Delivered timely technical support, resolving hardware and software issues.</li>
-    <li>Ensured data security by managing routine database backups.</li>
-    <li>Built and deployed customized computer systems to meet client needs.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <section id="experience">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jun 2022 - Present</div>
+                            <h3>DUTA OTO RAYA - <span>(Based On Project)</span></h3>
+                            <h4>Ciracas, Jakarta Timur, DKI Jakarta</h4>
+                            <ul>
+                                <li>Resolved complex hardware and software issues for clients.</li>
+                                <li>Developed tailored IT solutions, including CCTV and custom inventory apps.</li>
+                                <li>Designed and configured network access points across multiple locations.</li>
+                                <li>Designing and developing an end-to-end web-based inventory application.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jan 2021 - Present</div>
+                            <h3>Mustika Computer - <span>Hardware Engineering Computer</span></h3>
+                            <h4>Ciracas, Jakarta Timur, DKI Jakarta</h4>
+                            <ul>
+                                <li>Expert in diagnosing technical issues for both hardware and software.</li>
+                                <li>Skilled in providing customized IT solutions, including custom-built PCs.</li>
+                                <li>Designing and developing a modern, end-to-end article platform with a strong focus on SEO.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Oct 2021 - Dec 2021</div>
+                            <h3>Astra Honda Motor - <span>IT Support</span></h3>
+                            <h4>Cibitung, Jawa Barat</h4>
+                            <ul>
+                                <li>Delivered timely technical support, resolving hardware and software issues.</li>
+                                <li>Ensured data security by managing routine database backups.</li>
+                                <li>Built and deployed customized computer systems to meet client needs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="projects">
             <div class="container">
@@ -231,7 +233,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="project-card">
                         <div class="project-image-container">
                             <img src="images\project-inventaris-apps.png" alt="Proyek 2">
@@ -245,7 +246,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="project-card">
                         <div class="project-image-container">
                             <img src="images\project-administrasi-sekolah.png" alt="Proyek 3">
@@ -295,43 +295,86 @@
     </footer>
 
     <script>
-                // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // ===== LOGIKA MENU HAMBURGER & KLIK =====
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav a');
+        const body = document.body;
 
-                // Update active class
-                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+        // Fungsi untuk membuka/menutup menu
+        function toggleMenu() {
+            hamburger.classList.toggle('is-active');
+            navMenu.classList.toggle('is-open');
+            body.classList.toggle('no-scroll');
+        }
+
+        // Event listener untuk tombol hamburger
+        if (hamburger) {
+            hamburger.addEventListener('click', toggleMenu);
+        } else {
+            console.warn('Elemen .hamburger-menu tidak ditemukan.');
+        }
+
+        // Menangani klik pada link navigasi
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Jika menu mobile terbuka, tutup dulu sebelum scroll
+                if (navMenu.classList.contains('is-open')) {
+                    toggleMenu();
+                }
+
+                // Smooth scroll ke section yang dituju
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Update active class pada link yang diklik
+                navLinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
             });
         });
 
-        // Highlight active nav link on scroll
+        // ===== LOGIKA RESPONSIF UNTUK LOGO =====
+        const headerLogo = document.querySelector('.header-logo');
+        if (headerLogo) {
+            headerLogo.style.maxWidth = '100px'; // Pastikan logo memiliki ukuran yang sesuai di perangkat mobile
+        } else {
+            console.warn('Elemen .header-logo tidak ditemukan.');
+        }
+
+
+        // ===== LOGIKA BERBASIS SCROLL =====
         const sections = document.querySelectorAll('section');
-        const navLi = document.querySelectorAll('nav ul li a');
 
         window.addEventListener('scroll', () => {
             let current = '';
+            // Cari section yang sedang aktif di viewport
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - sectionHeight / 3) { // Adjust offset as needed
+                if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
                     current = section.getAttribute('id');
                 }
             });
 
-            navLi.forEach(li => {
-                li.classList.remove('active');
-                if (li.getAttribute('href').includes(current)) {
-                    li.classList.add('active');
+            // Update active class pada navigasi berdasarkan posisi scroll
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
                 }
             });
-            const observer = new IntersectionObserver((entries) => {
+        });
+
+
+        // ===== LOGIKA ANIMASI SAAT SCROLL (Intersection Observer) =====
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // Jika elemen terlihat di layar
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
                 }
@@ -340,17 +383,12 @@
             threshold: 0.1 // Memicu animasi saat 10% elemen terlihat
         });
 
-        // Ambil semua elemen timeline dan amati
+        // Amati semua elemen yang ingin dianimasikan
         const timelineItems = document.querySelectorAll('.timeline-item');
-        timelineItems.forEach(item => {
-            observer.observe(item);
-        });
+        timelineItems.forEach(item => observer.observe(item));
+
         const skillItems = document.querySelectorAll('.skill-item');
-        skillItems.forEach(item => {
-            observer.observe(item);
-        });
-        
-        });
+        skillItems.forEach(item => observer.observe(item));
     </script>
 </body>
 </html>
