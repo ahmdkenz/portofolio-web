@@ -2,112 +2,134 @@
 /* ==         File Aturan Responsif             == */
 /* =============================================== */
 
-/* -- Untuk Desktop Lebih Lebar (Opsional, tapi bagus) -- */
+/* -- Untuk Desktop Lebih Lebar (Opsional) -- */
 @media (min-width: 1400px) {
     .container {
-        max-width: 1300px; /* Sedikit lebih lebar di layar besar */
+        max-width: 1300px;
     }
 }
 
 /* -- Tablet & Desktop Kecil -- */
 @media (max-width: 992px) {
     #about .about-content {
-        flex-direction: column; /* Tumpuk gambar dan teks lebih awal */
+        flex-direction: column;
         text-align: center;
     }
-
     #about .about-text {
-        padding-left: 0; /* Hapus padding ekstra */
+        padding-left: 0;
     }
-
     .skills-grid {
         justify-content: center;
     }
 }
 
-/* -- Tablet & Smartphone (Potrait) -- */
+
+/* ================================================= */
+/* ==         ATURAN MOBILE UTAMA (768px kebawah) == */
+/* ================================================= */
+
 @media (max-width: 768px) {
     section {
         padding: 60px 0;
     }
+    h1, #hero h1 { font-size: 2.8em; }
+    h2 { font-size: 2.2em; }
+    #hero p { font-size: 1.2em; }
 
-    h1, #hero h1 {
-        font-size: 2.8em;
-    }
-
-    h2 {
-        font-size: 2.2em;
-    }
-
-    #hero p {
-        font-size: 1.2em;
-    }
-
-    /* --- Header Responsif --- */
-    header .container {
+    /* --- Tombol Hamburger --- */
+    .hamburger-menu {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        justify-content: space-around;
+        width: 30px;
+        height: 22px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001; /* Harus di atas segalanya */
+    }
+
+    .hamburger-menu span {
+        width: 30px;
+        height: 3px;
+        background-color: var(--text-color);
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: 1px;
+    }
+
+    /* Animasi Tombol Hamburger menjadi "X" */
+    .hamburger-menu.is-active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .hamburger-menu.is-active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    .hamburger-menu.is-active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    
+    /* --- Menu Navigasi Mobile (Overlay) --- */
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%; /* Lebar menu overlay */
+        max-width: 320px;
+        height: 100vh;
+        background-color: rgba(22, 27, 34, 0.9); /* Warna semi-transparan */
+        backdrop-filter: blur(10px); /* Efek blur untuk Safari & Chrome */
+        -webkit-backdrop-filter: blur(10px); /* Dukungan untuk Safari */
+        transform: translateX(100%); /* Sembunyikan di luar layar */
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+    }
+    
+    nav.is-open {
+        transform: translateX(0); /* Munculkan ke layar */
     }
 
     nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
+        width: 100%;
+        height: 100%;
+        gap: 30px;
     }
 
-    nav ul li {
-        margin-left: 0;
+    nav ul li a {
+        font-size: 1.5em; /* Perbesar font link di menu mobile */
+        font-weight: 600;
+        padding: 10px;
     }
 
     /* --- Timeline Experience --- */
-    .timeline::after {
-        left: 20px;
-    }
-
-    .timeline-item {
-        padding-left: 50px;
-        padding-bottom: 40px;
-    }
-
-    .timeline-dot {
-        left: 12px;
-    }
+    .timeline::after { left: 20px; }
+    .timeline-item { padding-left: 50px; padding-bottom: 40px; }
+    .timeline-dot { left: 12px; }
 }
 
 /* -- Smartphone Kecil -- */
 @media (max-width: 480px) {
-    h1, #hero h1 {
-        font-size: 2.2em;
-    }
+    h1, #hero h1 { font-size: 2.2em; }
+    h2 { font-size: 1.9em; }
+    #hero p { font-size: 1.1em; }
+    .btn { padding: 10px 22px; font-size: 0.9em; }
 
-    h2 {
-        font-size: 1.9em;
-    }
+    /* Penyesuaian logo */
+    .logo-link { font-size: 1.2em; }
+    .header-logo { height: 28px; }
 
-    #hero p {
-        font-size: 1.1em;
-    }
+    .project-card-content { padding: 20px; }
+    .skills-container { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 15px; }
+    .skill-icon { width: 45px; height: 45px; }
+}
 
-    .btn {
-        padding: 10px 22px;
-        font-size: 0.9em;
-    }
-
-    .logo span {
-        font-size: 0.9em;
-    }
-
-    .project-card-content {
-        padding: 20px;
-    }
-    
-    .skills-container {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 15px;
-    }
-
-    .skill-icon {
-        width: 50px;
-        height: 50px;
-    }
+/* Class untuk mencegah body scroll saat menu terbuka */
+.no-scroll {
+    overflow: hidden;
 }
