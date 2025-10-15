@@ -1,4 +1,4 @@
-        /* Global Styles */
+/* Global Styles */
         :root {
             --bg-color: #0d1117; /* Dark background */
             --text-color: #e6edf3; /* Light text */
@@ -804,6 +804,12 @@
     width: 100%;
     height: 100%;
     color: var(--accent-light); /* Warna ikon */
+}
+
+.skill-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits within the container without distortion */
 }
 
 .skill-item p {
