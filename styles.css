@@ -754,10 +754,16 @@
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ensure responsive layout */
+    gap: 20px; /* Add spacing between items */
     max-width: 900px;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(5, 1fr); /* Limit to 5 items per row on larger screens */
+    }
 }
 
 .skill-item {
